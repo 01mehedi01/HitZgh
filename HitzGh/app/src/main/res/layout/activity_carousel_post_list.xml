@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout_carousel_posts"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:layoutDirection="inherit"
+    tools:context="com.app.hitxghbeta.CarouselPostListActivity"
+    tools:openDrawer="end">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/mainBackground">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/carouselPostListAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:background="@drawable/gradient_background"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+
+
+                <!--             Here the xml                        -->
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/carouselPostListCollapsingLayout"
+                android:layout_width="match_parent"
+                app:titleEnabled="false"
+                android:clipChildren="false"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <RelativeLayout
+                    android:layout_marginTop="?attr/actionBarSize"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.synnapps.carouselview.CarouselView
+                        android:id="@+id/carouselPostListCarouselView"
+                        android:layout_width="match_parent"
+                        android:layout_height="250dp"
+                        app:fillColor="#FFFFFFFF"
+                        android:visibility="gone"
+                        app:indicatorMarginVertical="25dp"
+                        app:indicatorGravity="top|end"
+                        app:pageTransformer="flow"
+                        app:snap="true"
+                        app:pageColor="#00000000"
+                        app:radius="4dp"
+                        app:slideInterval="3000"/>
+
+
+                    <com.nex3z.flowlayout.FlowLayout
+                        android:id="@+id/carouselPostListFlowLayout"
+                        android:layout_below="@id/carouselPostListCarouselView"
+                        android:padding="10dp"
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="center"
+                        app:flChildSpacing="auto"
+                        app:flChildSpacingForLastRow="align"
+                        app:flRowSpacing="6dp"/>
+
+
+                </RelativeLayout>
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/carouselPostListToolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:gravity="top"
+                    android:background="@drawable/gradient_background"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                    <TextView
+                        android:id="@+id/carouselPostListToolbarTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:maxHeight="50dp"
+                        android:layout_gravity="center"
+                        android:maxLines="1"
+                        android:text="@string/app_name"
+                        android:textColor="#FFF"
+                        android:textSize="21sp" />
+
+                </android.support.v7.widget.Toolbar>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefressfragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+
+            <FrameLayout
+                android:layout_below="@+id/postviewhomepage_adView"
+                android:id="@+id/carouselPostListFrameLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+
+     </android.support.v4.widget.SwipeRefreshLayout>
+
+
+        <View
+            android:id="@+id/carouselPostList_view_search_tint"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="6dp"
+            android:visibility="gone"
+            android:background="#88000000"
+            android:alpha="0.0"
+            android:layerType="hardware"/>
+
+
+
+        <org.cryse.widget.persistentsearch.PersistentSearchView
+            android:layout_width="match_parent"
+            android:id="@+id/carouselPostList_searchview"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:elevation="6dp"
+            app:persistentSV_displayMode="menuItem"
+            app:persistentSV_searchTextColor="@color/primaryTextColor"
+            app:persistentSV_editTextColor="@color/primaryTextColor"
+            app:persistentSV_editHintText="@string/search_string"
+            app:persistentSV_editHintTextColor="@color/primaryTextColor"
+            app:persistentSV_searchCardElevation="4dp"
+            app:persistentSV_customToolbarHeight="56dp"/>
+
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view_carousel_posts"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:background="@color/navDrawerBackground"
+        app:itemTextAppearance="@style/NavigationDrawerStyle"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer"
+        app:itemIconTint="@color/primaryTextColor"
+        app:itemTextColor="@color/primaryTextColor" />
+</android.support.v4.widget.DrawerLayout>

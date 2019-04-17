@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/action_speak"
+        android:orderInCategory="96"
+        android:title="Read Article"
+        android:icon="@drawable/ic_speak"
+        android:visible="false"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_save"
+        android:orderInCategory="97"
+        android:title="Save Post"
+        android:icon="@drawable/ic_save_black_24dp"
+        android:visible="false"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_delete"
+        android:orderInCategory="97"
+        android:title="Delete Post"
+        android:icon="@drawable/ic_delete_forever_black_24dp"
+        android:visible="false"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_share"
+        android:orderInCategory="98"
+        android:title="Share"
+        android:icon="@drawable/ic_menu_share"
+        android:visible="false"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_add_comments"
+        android:orderInCategory="99"
+        android:title="@string/add_comment"
+        android:icon="@drawable/ic_add_comments"
+        android:visible="false"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_comments"
+        android:orderInCategory="99"
+        android:title="@string/comments_title"
+        android:icon="@drawable/ic_multiple_comments"
+        android:visible="false"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        android:icon="@drawable/ic_settings_white_24dp"
+        android:visible="false"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/action_search"
+        android:orderInCategory="101"
+        android:title="Search"
+        android:icon="@drawable/ic_search_white_24dp"
+        android:visible="false"
+        app:showAsAction="ifRoom"/>
+    <item
+        android:id="@+id/action_download"
+        android:orderInCategory="102"
+        android:icon="@drawable/ic_file_download"
+        android:visible="false"
+        app:showAsAction="ifRoom"/>
+
+    <item android:id="@+id/exitmain"
+        android:title="Exit" />
+</menu>

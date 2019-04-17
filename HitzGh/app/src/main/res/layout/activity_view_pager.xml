@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout_viewpager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    android:layoutDirection="inherit"
+    tools:context="com.app.hitxghbeta.ViewPagerActivity"
+    tools:openDrawer="end">
+
+    <android.support.design.widget.CoordinatorLayout
+        android:fitsSystemWindows="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="true"
+            android:background="@drawable/gradient_background"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/collapse_toolbar"
+                android:layout_width="match_parent"
+                app:titleEnabled="false"
+                android:clipChildren="false"
+                android:layout_height="wrap_content"
+                android:fitsSystemWindows="true"
+                app:contentScrim="?attr/colorPrimary"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/viewpager_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:layout_marginBottom="48dp"
+                    android:gravity="top"
+                    app:layout_collapseMode="pin"
+                    app:popupTheme="@style/AppTheme.PopupOverlay">
+                        <TextView
+                            android:id="@+id/title_viewpager"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:maxHeight="50dp"
+                            android:layout_gravity="center"
+                            android:maxLines="1"
+                            android:text="@string/app_name"
+                            android:textColor="#FFF"
+                            android:textSize="21sp" />
+
+                </android.support.v7.widget.Toolbar>
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tabs"
+                    android:layout_gravity="bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_anchor="@+id/appbar"
+                    app:layout_anchorGravity="bottom"
+                    app:layout_collapseMode="pin"
+                    app:tabIndicatorColor="@color/md_white_1000"
+                    app:tabMode="scrollable"
+                    app:tabGravity="center"/>
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/viewpager"
+            android:background="@color/mainBackground"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"  />
+
+        <View
+            android:id="@+id/view_search_tintVP"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:elevation="6dp"
+            android:visibility="gone"
+            android:background="#88000000"
+            android:alpha="0.0"
+            android:layerType="hardware"/>
+
+        <org.cryse.widget.persistentsearch.PersistentSearchView
+            android:layout_width="match_parent"
+            android:id="@+id/searchviewVP"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:elevation="6dp"
+            app:persistentSV_displayMode="menuItem"
+            app:persistentSV_searchTextColor="#DE000000"
+            app:persistentSV_editTextColor="#DE000000"
+            app:persistentSV_editHintText="Search"
+            app:persistentSV_editHintTextColor="#61000000"
+            app:persistentSV_searchCardElevation="4dp"
+            app:persistentSV_customToolbarHeight="56dp"/>
+
+    </android.support.design.widget.CoordinatorLayout>
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view_viewpager"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:background="@color/navDrawerBackground"
+        app:itemTextAppearance="@style/NavigationDrawerStyle"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer"
+        app:itemIconTint="@color/primaryTextColor"
+        app:itemTextColor="@color/primaryTextColor" />
+</android.support.v4.widget.DrawerLayout>

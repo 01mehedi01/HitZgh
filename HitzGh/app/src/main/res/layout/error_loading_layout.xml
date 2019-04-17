@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:textSize="17sp"
+        android:layout_margin="15dp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:id="@+id/errorMessageView"
+        android:textColor="@color/primaryTextColor"
+        android:text="@string/error_loading_posts_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <Button
+        android:layout_centerHorizontal="true"
+        android:id="@+id/reloadBtn"
+        android:layout_marginBottom="10dp"
+        android:textSize="17sp"
+        android:layout_below="@id/errorMessageView"
+        android:textColor="@color/btnTextColor"
+        android:background="@color/mainBackground"
+        style="@style/Base.Widget.AppCompat.Button.Borderless"
+        android:text="@string/retry_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <View
+        android:layout_below="@id/reloadBtn"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:layout_height="1dp"
+        android:layout_gravity="bottom"
+        android:background="@color/dividerColor" />
+
+</RelativeLayout>

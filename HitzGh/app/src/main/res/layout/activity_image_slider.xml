@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <RelativeLayout
+        android:layout_marginTop="?attr/actionBarSize"
+        android:gravity="center_vertical|center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <!--<com.synnapps.carouselview.CarouselView
+            android:id="@+id/ImgSliderView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:autoPlay="false"
+            app:fillColor="@color/md_deep_orange_500"
+            app:pageColor="#00000000"
+            app:radius="4dp"
+            app:slideInterval="3000"
+            app:strokeColor="@color/md_deep_orange_500"
+            app:strokeWidth="1dp"/>-->
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_alignParentTop="true" />
+
+        <com.synnapps.carouselview.CirclePageIndicator
+            android:id="@+id/indicator"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:gravity="bottom"
+            android:padding="10dip"
+            android:layout_marginBottom="50dp"
+            app:strokeColor="@color/md_orange_500"
+            app:centered="true"
+            app:fillColor="@color/md_deep_orange_500"
+            app:snap="false" />
+
+
+    </RelativeLayout>
+
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        app:elevation="0dp">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/slider_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:layout_collapseMode="pin" />
+
+    </android.support.design.widget.AppBarLayout>
+
+</android.support.design.widget.CoordinatorLayout>

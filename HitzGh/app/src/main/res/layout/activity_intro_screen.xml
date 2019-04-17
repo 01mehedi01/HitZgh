@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="inherit"
+    tools:context="com.app.hitxghbeta.IntroScreen">
+
+    <com.synnapps.carouselview.CarouselView
+        android:id="@+id/introCarouselView"
+        app:indicatorGravity="center_horizontal|bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+        <RelativeLayout
+            android:background="#56333333"
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <Button
+                android:id="@+id/skipBtn"
+                android:text="SKIP"
+                android:layout_alignParentStart="true"
+                android:background="@android:color/transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <Button
+                android:id="@+id/nextBtn"
+                android:text="Next"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+</RelativeLayout>

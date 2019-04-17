@@ -1,0 +1,118 @@
+<resources>
+    <string name="app_name">HitzGh beta</string>
+    <string name="app_description">Latest Music Downloads And More </string>
+    <string name="title_activity_comments">Comments</string>
+    <string name="action_comment">Comment</string>
+    <string name="action_refresh">Reload</string>
+    <string name="admob_app_id">ca-app-pub-9004069552574187~5604556064</string>
+    <string name="banner_ad_id">ca-app-pub-9004069552574187/8699700685</string>
+    <string name="banner_ads_new_id">ca-app-pub-3940256099942544/6300978111</string>
+    <string name="interstitial_ad_id">ca-app-pub-9004069552574187/8344477463</string>
+    <string name="interstitial_ads_new_id">ca-app-pub-3940256099942544/1033173712</string>
+
+    <string name="reward_video_ads">ca-app-pub-3940256099942544/5224354917</string><!--Not enabled-->
+    <string name="youtube_api_key">AIzaSyCjpI-ItO3KPISDaGAKy7gZIYli6k1N1Vk</string>
+
+    <string name="fb_ads_banner_placement_id">854845447931793_1724649850951344</string>
+    <string name="fb_ads_interstitial_placement_id">854845447931793_1724650697617926</string>
+
+
+    <string name="facebook_application_id" translatable="false">APP_ID</string>
+    <!-- Facebook Application ID, prefixed by 'fb'. Enables Chrome Custom tabs. -->
+    <string name="facebook_login_protocol_scheme" translatable="false">fbAPP_ID</string>
+
+    <string name="twitter_consumer_key" translatable="false">YOURCONSUMERKEY</string>
+    <string name="twitter_consumer_secret" translatable="false">YOURCONSUMERSECRET</string>
+
+    <string name="update_now_btn_string">Update</string>
+    <string name="update_later_string">Later</string>
+
+    <string name="contetn_box_load_more">See More </string>
+
+    <string name="image_download_msg">Please wait. We\'re downloading the image</string>
+
+    <!--Error loading content screen-->
+    <string name="error_loading_posts_message">Something wrong when loading the posts. Please retry.</string>
+    <string name="retry_btn">Retry</string>
+
+    <!--Splash Screen Strings-->
+    <string name="intro_screen_canceled">Canceled (RESULT_CANCELED)</string>
+
+    <!--Main Screen  Strings-->
+    <string name="main_screen_title">HitzGh</string>
+    <string name="error_fetching_settings">Settings not saved</string>
+
+    <!--Post List (Category) Strings-->
+    <string name="related_posts">Related Posts</string>
+    <string name="error_loading_categories">Error loading categories</string>
+
+    <!--Post Detail Screen-->
+    <string name="error_loading_post">Error Loading Post</string>
+    <string name="post_saved_successfully">Post saved successfully</string>
+    <string name="wait_while_image_is_downloading">Please wait while image is downloading</string>
+    <string name="share_via_text">Choose</string>
+    <string name="image_downloading_failed">Image downloading failed</string>
+    <string name="read_out_loud_text">Initializing the reader</string>
+    <string name="no_text_to_speak_msg">Please wait for the content to be loaded</string>
+    <string name="pause_youtube">Pause the YouTube video and then press Speak</string>
+
+    <!--Comments List Screen-->
+    <string name="comments">Comments</string>
+    <string name="no_comments">No Comments here</string>
+    <string name="all_comments_loaded">All comments loaded</string>
+
+    <!--Add Comment String-->
+    <string name="name_hint">Name</string>
+    <string name="email_hint">Email</string>
+    <string name="comment_hint">Comment</string>
+    <string name="btn_post_comment">Post Comment</string>
+    <string name="invalid_post">Invalid Post</string>
+    <string name="error_name_field">Recheck name field</string>
+    <string name="error_email_field">Recheck email field</string>
+    <string name="error_comment_field">Recheck comment field</string>
+    <string name="posting_coment_msg">Posting your comment. Wait a second</string>
+    <string name="comment_posted">Comment posted</string>
+    <string name="failed_posting_comment">Failed to post comment</string>
+    <string name="posting_success_title">Comment Posted</string>
+    <string name="posting_success_body">Your comment status is : </string>
+    <string name="login_before_comment">You need to be logged in to post a comment</string>
+
+    <string name="search_string">Search Queries Here</string>
+    <string name="categories_title">Categories</string>
+    <string name="settings_string">Settings</string>
+    <string name="comments_title">Comments</string>
+    <string name="add_comment">Leave a comment</string>
+    <string name="loading_error_msg">Error fetching posts</string>
+
+    <string name="loading_more_comments">Loading more comments</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="dummy_title">This is the purfect example of dummy title that makes no sense at all</string>
+    <string name="dummy_category">Category A</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!--Tabbed Page Settings-->
+    <string-array name="tab_name">
+        <item>Beauty</item>
+        <item>Fashion</item>
+        <item>Model</item>
+        <item>Sports</item>
+        <item>Music</item>
+        <item>World</item>
+    </string-array>
+    <integer-array name="tab_id">
+        <item>445</item>
+        <item>446</item>
+        <item>465</item>
+        <item>479</item>
+        <item>489</item>
+        <item>486</item>
+    </integer-array>
+    <string name="title_activity_settings">Settings</string>
+
+</resources>

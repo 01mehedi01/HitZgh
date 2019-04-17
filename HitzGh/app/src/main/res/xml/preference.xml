@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+    android:title="@string/dummy_category"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <CheckBoxPreference
+        android:defaultValue="true"
+        android:key="some_key"
+        android:title="Some Option"
+        android:widgetLayout="@layout/mp_preference_switch"/>
+    <CheckBoxPreference
+        android:defaultValue="false"
+        android:key="some_key2"
+        android:title="Hooray!"
+        android:summary="@string/dummy_title"
+        android:icon="@drawable/ic_menu_camera"
+        android:widgetLayout="@layout/mp_preference_switch"/>
+    <EditTextPreference
+        android:defaultValue="Default value"
+        android:key="edit_text_preference_1"
+        android:selectAllOnFocus="true"
+        android:singleLine="true"
+        android:title="Edit text preference" />
+</PreferenceScreen>

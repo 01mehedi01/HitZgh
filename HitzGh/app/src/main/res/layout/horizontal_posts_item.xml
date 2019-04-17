@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/horizontalPostsItem"
+    android:clickable="true"
+    android:foreground="?android:attr/selectableItemBackground"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.CardView
+        android:clickable="false"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:id="@+id/hpiCardView"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_margin="5dp"
+        android:layout_width="150dp"
+        android:minHeight="190dp"
+        app:cardBackgroundColor="@color/cardBackgroundColor"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/hpi_image"
+            android:scaleType="centerCrop"
+            android:contentDescription="Dummy Description"
+            android:layout_width="match_parent"
+            android:layout_height="125dp" />
+        <TextView
+            android:id="@+id/hpi_title"
+            android:padding="6dp"
+            android:textSize="16sp"
+            android:maxLines="3"
+            android:ellipsize="end"
+            android:textColor="@color/primaryTextColor"
+            android:text="Some Dummy Title Here"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

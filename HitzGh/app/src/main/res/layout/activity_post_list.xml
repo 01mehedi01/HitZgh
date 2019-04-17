@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="inherit"
+    tools:context="com.app.hitxghbeta.PostListActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/postListAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/postListCollapsingLayout"
+            android:layout_width="match_parent"
+            app:titleEnabled="false"
+            android:clipChildren="false"
+            android:layout_height="wrap_content"
+            android:background="@color/md_white_1000"
+            android:fitsSystemWindows="true"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <com.nex3z.flowlayout.FlowLayout
+                android:id="@+id/postListFlowLayout"
+                android:layout_marginTop="?attr/actionBarSize"
+                android:padding="10dp"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                app:flChildSpacing="auto"
+                app:flChildSpacingForLastRow="align"
+                app:flRowSpacing="6dp"/>
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/postListToolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@drawable/gradient_background"
+                android:gravity="top"
+                app:layout_collapseMode="pin"
+                app:popupTheme="@style/AppTheme.PopupOverlay">
+
+                <TextView
+                    android:id="@+id/postListToolbarTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxHeight="50dp"
+                    android:layout_gravity="center"
+                    android:maxLines="1"
+                    android:text="@string/app_name"
+                    android:textColor="#FFF"
+                    android:textSize="21sp" />
+
+            </android.support.v7.widget.Toolbar>
+
+        </android.support.design.widget.CollapsingToolbarLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:id="@+id/swiperefresspostlist"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+    <FrameLayout
+        android:id="@+id/postListFrameLayout"
+        android:background="@color/mainBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+    </android.support.v4.widget.SwipeRefreshLayout>
+
+    <View
+        android:id="@+id/postList_view_search_tint"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="6dp"
+        android:visibility="gone"
+        android:background="#88000000"
+        android:alpha="0.0"
+        android:layerType="hardware"/>
+
+    <org.cryse.widget.persistentsearch.PersistentSearchView
+        android:layout_width="match_parent"
+        android:id="@+id/postList_searchview"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:elevation="6dp"
+        app:persistentSV_displayMode="menuItem"
+        app:persistentSV_searchTextColor="#DE000000"
+        app:persistentSV_editTextColor="#DE000000"
+        app:persistentSV_editHintText="Search"
+        app:persistentSV_editHintTextColor="#61000000"
+        app:persistentSV_searchCardElevation="4dp"
+        app:persistentSV_customToolbarHeight="56dp"/>
+
+</android.support.design.widget.CoordinatorLayout>

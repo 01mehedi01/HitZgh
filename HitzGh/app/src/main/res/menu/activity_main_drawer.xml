@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group>
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_chevron_right_black_24dp"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_posts"
+            android:icon="@drawable/ic_latest_post"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_tab_posts"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Home" />
+        <item
+            android:id="@+id/my_category"
+            android:icon="@drawable/ic_menu_gallery"
+            android:visible="false"
+            android:title="Automotive (Category Item)"/>
+        <item
+            android:id="@+id/nav_pages"
+            android:visible="true"
+            android:icon="@drawable/ic_pages"
+            android:title="Pages" />
+        <item
+            android:id="@+id/nav_categories"
+            android:icon="@drawable/ic_categories"
+            android:title="Categories" />
+        <item
+            android:id="@+id/nav_offline_posts"
+            android:icon="@drawable/ic_saved_posts"
+            android:title="Saved Posts"/>
+    </group>
+
+    <group android:id="@+id/group2">
+            <item android:id="@+id/nav_fb"
+                android:title="Facebook"
+                android:visible="false"
+                android:icon="@drawable/ic_facebook"/>
+
+            <item android:id="@+id/nav_contacus"
+                android:visible="true"
+                android:title="Contact Us"
+                android:icon="@drawable/contact_us"/>
+
+           <item android:id="@+id/nav_tw"
+            android:visible="true"
+            android:title="Twitter"
+            android:icon="@drawable/ic_twitter"/>
+            <item android:id="@+id/nav_yt"
+                android:visible="true"
+                android:title="YouTube"
+                android:icon="@drawable/ic_youtube"/>
+            <item android:id="@+id/nav_insta"
+                android:visible="false"
+                android:title="Instagram"
+                android:icon="@drawable/ic_instagram"/>
+            <item android:id="@+id/nav_web_url"
+                android:visible="true"
+                android:title="Facebook"
+                android:icon="@drawable/ic_facebook"/>
+    </group>
+
+    <group android:id="@+id/group3">
+            <item
+                android:id="@+id/nav_settings"
+                android:icon="@drawable/ic_night_mode"
+                android:title="Night Mode"/>
+            <item
+                android:id="@+id/nav_rate_us"
+                android:icon="@drawable/ic_star"
+                android:title="Rate This App"/>
+    </group>
+
+</menu>
