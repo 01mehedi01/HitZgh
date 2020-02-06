@@ -1,3 +1,3 @@
 # HitZgh
 
-### Bug Fixing and addition Feature for client  
+### Bug Fixing .Add  addition Feature  and function  for client  
